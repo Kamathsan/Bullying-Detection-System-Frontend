@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9500;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero .cta {
+    display: inline-block;
+    background: #ff9500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero .cta:hover {
+    background: #e08900;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px; /* Adds spacing between text and image */
+}
+main .content {
+    max-width: 40%;
+}
+
+
+main .content h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+main .content p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+main .content button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main .content button:hover {
+    background-color: #2980b9;
+}
+main .image {
+    flex: 1; /* Allow the image to take up space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+main .image img {
+   max-width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Move the image to the right corner */
+}
+
+.scrolling-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Adjust as needed */
+    padding: 10px 0;
+    background-color: #f9f9f9; /* Optional: Add background color for contrast */
+}
+
+/* Scrolling text animation */
+.scrolling-text {
+    display: inline-block;
+    font-size: 18px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(90%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.card input button:hover {
+    background-color: #ff9500;
+}
+ 
+  .input-header{
+    padding: 35px;
+    background:linear-gradient(to left, #eb5757, #000000);
+}
+  
+  
+  .input-content h2 {
+    padding-bottom: 45px;
+    font-size: 2em;
+    padding-left:50px;
+    padding-top: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  .input-content h2 span {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 6px 3px;
+    border: 1px solid #ff9500;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    vertical-align: middle;
+    color: #ff9500;
+  }
+  .input-content .inputbox {
+    overflow: hidden;
+    position: relative;
+    padding: 15px 0 2px 20px;
+  }
+  .input-content .inputbox-title {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 200px;
+    height: 30px;
+    color: #666;
+    font-weight: bold;
+    line-height: 30px;
+  }
+  .input-content .inputbox-content {
+    position: relative;
+    width: 100%;
+  }
+  .input-content .inputbox-content input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    line-height: 30px;
+    font-size: 14px;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .input-content .inputbox-content input:focus ~ label, .input-content .inputbox-content input:valid ~ label {
+    color: #000000;
+    transform: translateY(-20px);
+    font-size: 0.825em;
+    cursor: default;
+  }
+  .input-content .inputbox-content input:focus ~ .underline {
+    width: 100%;
+  }
+  .input-content .inputbox-content label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    line-height: 30px;
+    color: #ccc;
+    cursor: text;
+    transition: all 200ms ease-out;
+    z-index: 10;
+  }
+  .input-content .inputbox-content .underline {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right:10px;
+    width: 0;
+    height: 2px;
+    background: #ff9500;
+    transition: all 200ms ease-out;
+  }
+  .input-content .btns {
+    padding: 25px 0px 0px 250px;
+  }
+  .input-content .btns .btn {
+    display: inline-block;
+    margin-right: 2px;
+    padding: 10px 25px;
+    background: none;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+    color: #666;
+    font-size: 1.125em;
+    outline: none;
+    transition: all 100ms ease-out;
+  }
+  .input-content .btns .btn:hover, .input-content .btns .btn:focus {
+    transform: translateY(-3px);
+  }
+  .input-content .btns .btn-confirm {
+    border: 1px solid #ff9500;
+    background: #ff9500;
+    color: #fff;
+  }
+
+
+main .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.scrolling-text-container {
+    background: #eee;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.tools {
+    padding: 20px;
+    text-align: center;
+}
+
+.tools .card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.slider-container {
+    margin-top: 20px;
+}
+
+.filter-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter-card {
+    width: 300px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.filter-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.filter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-card img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.filter-card h3 {
+    margin-top: 0;
+}
+
+.filter-card p {
+    margin-bottom: 10px;
+}
+
+.filter-card button {
+    background-color: #ff9500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.filter-card button:hover {
+    background-color: #ff9500;
+}
+
+.filter-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
